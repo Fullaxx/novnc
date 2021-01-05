@@ -31,7 +31,7 @@ because the localhost of the vnc server is not reachable from inside the novnc c
 You can use --network=host to avoid this issue, or bind to any non-localhost IP address.
 
 ## Create a self-signed certificate
-For a quick example on SSL certificate creation, [go here](https://github.com/Fullaxx/novnc/blob/main/CERTIFICATE_CREATION.md)
+For a quick example on SSL certificate creation, [go here](https://github.com/Fullaxx/novnc/blob/master/CERTIFICATE_CREATION.md)
 
 ## Build it locally using the github repository
 ```
