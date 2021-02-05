@@ -3,10 +3,12 @@
 ## Base Docker Image
 [Ubuntu](https://hub.docker.com/_/ubuntu) 20.04 (x64)
 
-## Get the image from Docker Hub
+## Get the image from Docker Hub or build it locally
 ```
 docker pull fullaxx/novnc
+docker build -t="fullaxx/novnc" github.com/Fullaxx/novnc
 ```
+
 ## Run the image (using fullaxx/ubuntu-desktop as working example)
 noVNC will listen on port 8080 inside the container. \
 Run the image on 172.17.0.1, pointing to VNC server at 172.17.0.1:5901
@@ -32,11 +34,6 @@ You can use --network=host to avoid this issue, or bind to any non-localhost IP 
 
 ## Create a self-signed certificate
 For a quick example on SSL certificate creation, [go here](https://github.com/Fullaxx/novnc/blob/master/CERTIFICATE_CREATION.md)
-
-## Build it locally using the github repository
-```
-docker build -t="fullaxx/novnc" github.com/Fullaxx/novnc
-```
 
 ## Posting Issues on Github
 When posting issues, please provide the following:
