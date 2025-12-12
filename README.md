@@ -1,7 +1,7 @@
 # An Ubuntu docker image running noVNC
 
 ## Base Docker Image
-[Ubuntu](https://hub.docker.com/_/ubuntu) 22.04 (x64)
+[Ubuntu](https://hub.docker.com/_/ubuntu) 24.04 (x64)
 
 ## Get the image from Docker Hub or build it locally
 ```
