@@ -9,18 +9,18 @@ docker pull ghcr.io/fullaxx/novnc
 docker build -t="ghcr.io/fullaxx/novnc" github.com/Fullaxx/novnc
 ```
 
-## Run the image (using fullaxx/ubuntu-desktop as working example)
+## Run the image (using ubuntu-desktop as working example)
 noVNC will listen on port 8080 inside the container. \
 Run the image on 172.17.0.1, pointing to VNC server at 172.17.0.1:5901
 ```
-docker run -d --rm -p 172.17.0.1:5901:5901 fullaxx/ubuntu-desktop
+docker run -d --rm -p 172.17.0.1:5901:5901 ghcr.io/fullaxx/ubuntu-desktop
 docker run -d -e VNCADDR=172.17.0.1:5901 -p 172.17.0.1:80:8080 ghcr.io/fullaxx/novnc
 Browse to http://172.17.0.1:80/
 ```
 Run the image using an SSL cert called novnc.pem found in /tmp/cert \
 Make sure to volume mount the certificate in /cert
 ```
-docker run -d --rm -p 172.17.0.1:5901:5901 fullaxx/ubuntu-desktop
+docker run -d --rm -p 172.17.0.1:5901:5901 ghcr.io/fullaxx/ubuntu-desktop
 docker run -d -e VNCADDR=172.17.0.1:5901 -p 172.17.0.1:80:8080 -e CERTFILE=novnc.pem -v /tmp/cert:/cert ghcr.io/fullaxx/novnc
 Browse to https://172.17.0.1:80/
 ```
