@@ -3,7 +3,7 @@
 ## Base Docker Image
 [Ubuntu](https://hub.docker.com/_/ubuntu) 24.04 (x64)
 
-## Get the image from Docker Hub or build it locally
+## Pull the image from or build it locally
 ```
 docker pull ghcr.io/fullaxx/novnc
 docker build -t="ghcr.io/fullaxx/novnc" github.com/Fullaxx/novnc
