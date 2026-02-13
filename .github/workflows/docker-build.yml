@@ -35,6 +35,8 @@ jobs:
             tag: bookworm
           - dockerfile: Dockerfile.bullseye
             tag: bullseye
+          - dockerfile: Dockerfile.alpine
+            tag: alpine
 
     steps:
       - name: Checkout repository

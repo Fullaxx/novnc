@@ -1,0 +1,25 @@
+# ------------------------------------------------------------------------------
+# Pull base image
+FROM alpine:latest
+LABEL author="Brett Kuskie <fullaxx@gmail.com>"
+
+# ------------------------------------------------------------------------------
+# Install novnc,websockify and clean up
+RUN apk add --no-cache bash novnc websockify
+
+# ------------------------------------------------------------------------------
+# Install scripts and configuration files
+COPY app/app.sh /app/
+COPY noVNC/index.html /usr/share/novnc/
+
+# ------------------------------------------------------------------------------
+# Add volumes
+VOLUME /cert
+
+# ------------------------------------------------------------------------------
+# Expose ports
+EXPOSE 8080
+
+# ------------------------------------------------------------------------------
+# Define default command
+CMD ["/app/app.sh"]

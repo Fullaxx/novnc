@@ -1,6 +1,7 @@
 # A docker image running noVNC
 
 ## Base Docker Image
+[Alpine](https://hub.docker.com/_/alpine) (x64)
 [Debian](https://hub.docker.com/_/debian) (x64)
 [Ubuntu](https://hub.docker.com/_/ubuntu) (x64)
 
@@ -11,6 +12,10 @@ docker pull ghcr.io/fullaxx/novnc:noble
 docker pull ghcr.io/fullaxx/novnc:jammy
 docker pull ghcr.io/fullaxx/novnc:focal
 ```
+### Alpine Images
+```
+docker pull ghcr.io/fullaxx/novnc:alpine
+```
 ### Debian Images
 ```
 docker pull ghcr.io/fullaxx/novnc:trixie
@@ -19,10 +24,11 @@ docker pull ghcr.io/fullaxx/novnc:bullseye
 ```
 ### Build locally
 ```
-docker build -f Dockerfile.noble -t ghcr.io/fullaxx/novnc:noble .
-docker build -f Dockerfile.jammy -t ghcr.io/fullaxx/novnc:jammy .
-docker build -f Dockerfile.focal -t ghcr.io/fullaxx/novnc:focal .
-docker build -f Dockerfile.trixie -t ghcr.io/fullaxx/novnc:trixie .
+docker build -f Dockerfile.alpine   -t ghcr.io/fullaxx/novnc:alpine .
+docker build -f Dockerfile.noble    -t ghcr.io/fullaxx/novnc:noble .
+docker build -f Dockerfile.jammy    -t ghcr.io/fullaxx/novnc:jammy .
+docker build -f Dockerfile.focal    -t ghcr.io/fullaxx/novnc:focal .
+docker build -f Dockerfile.trixie   -t ghcr.io/fullaxx/novnc:trixie .
 docker build -f Dockerfile.bookworm -t ghcr.io/fullaxx/novnc:bookworm .
 docker build -f Dockerfile.bullseye -t ghcr.io/fullaxx/novnc:bullseye .
 ```
