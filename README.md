@@ -1,12 +1,30 @@
-# An Ubuntu docker image running noVNC
+# A docker image running noVNC
 
 ## Base Docker Image
-[Ubuntu](https://hub.docker.com/_/ubuntu) 24.04 (x64)
+[Debian](https://hub.docker.com/_/debian) (x64)
+[Ubuntu](https://hub.docker.com/_/ubuntu) (x64)
 
-## Pull the image from or build it locally
+## Pull the images or Build them locally
+### Ubuntu Images
 ```
-docker pull ghcr.io/fullaxx/novnc
-docker build -t="ghcr.io/fullaxx/novnc" github.com/Fullaxx/novnc
+docker pull ghcr.io/fullaxx/novnc:noble
+docker pull ghcr.io/fullaxx/novnc:jammy
+docker pull ghcr.io/fullaxx/novnc:focal
+```
+### Debian Images
+```
+docker pull ghcr.io/fullaxx/novnc:trixie
+docker pull ghcr.io/fullaxx/novnc:bookworm
+docker pull ghcr.io/fullaxx/novnc:bullseye
+```
+### Build locally
+```
+docker build -f Dockerfile.noble -t ghcr.io/fullaxx/novnc:noble .
+docker build -f Dockerfile.jammy -t ghcr.io/fullaxx/novnc:jammy .
+docker build -f Dockerfile.focal -t ghcr.io/fullaxx/novnc:focal .
+docker build -f Dockerfile.trixie -t ghcr.io/fullaxx/novnc:trixie .
+docker build -f Dockerfile.bookworm -t ghcr.io/fullaxx/novnc:bookworm .
+docker build -f Dockerfile.bullseye -t ghcr.io/fullaxx/novnc:bullseye .
 ```
 
 ## Run the image (using ubuntu-desktop as working example)
