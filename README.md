@@ -6,12 +6,6 @@
 [Ubuntu](https://hub.docker.com/_/ubuntu) (x64)
 
 ## Pull the images or Build them locally
-### Ubuntu Images
-```
-docker pull ghcr.io/fullaxx/novnc:noble
-docker pull ghcr.io/fullaxx/novnc:jammy
-docker pull ghcr.io/fullaxx/novnc:focal
-```
 ### Alpine Images
 ```
 docker pull ghcr.io/fullaxx/novnc:alpine
@@ -22,9 +16,17 @@ docker pull ghcr.io/fullaxx/novnc:trixie
 docker pull ghcr.io/fullaxx/novnc:bookworm
 docker pull ghcr.io/fullaxx/novnc:bullseye
 ```
+### Ubuntu Images
+```
+docker pull ghcr.io/fullaxx/novnc:resolute
+docker pull ghcr.io/fullaxx/novnc:noble
+docker pull ghcr.io/fullaxx/novnc:jammy
+docker pull ghcr.io/fullaxx/novnc:focal
+```
 ### Build locally
 ```
 docker build -f Dockerfile.alpine   -t ghcr.io/fullaxx/novnc:alpine .
+docker build -f Dockerfile.resolute -t ghcr.io/fullaxx/novnc:resolute .
 docker build -f Dockerfile.noble    -t ghcr.io/fullaxx/novnc:noble .
 docker build -f Dockerfile.jammy    -t ghcr.io/fullaxx/novnc:jammy .
 docker build -f Dockerfile.focal    -t ghcr.io/fullaxx/novnc:focal .

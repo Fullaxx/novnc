@@ -23,6 +23,8 @@ jobs:
     strategy:
       matrix:
         include:
+          - dockerfile: Dockerfile.resolute
+            tag: resolute
           - dockerfile: Dockerfile.noble
             tag: noble
           - dockerfile: Dockerfile.jammy

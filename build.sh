@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 for BASEIMAGE in `grep '^FROM' Dockerfile.* | awk '{print $2}'`; do
   docker pull ${BASEIMAGE}
 done
@@ -15,5 +13,6 @@ docker build -f Dockerfile.trixie -t ghcr.io/fullaxx/novnc:trixie .
 docker build -f Dockerfile.focal -t ghcr.io/fullaxx/novnc:focal .
 docker build -f Dockerfile.jammy -t ghcr.io/fullaxx/novnc:jammy .
 docker build -f Dockerfile.noble -t ghcr.io/fullaxx/novnc:noble .
+docker build -f Dockerfile.resolute -t ghcr.io/fullaxx/novnc:resolute .
 
 docker tag ghcr.io/fullaxx/novnc:trixie ghcr.io/fullaxx/novnc:latest
