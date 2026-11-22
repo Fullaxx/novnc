@@ -1,9 +1,21 @@
 # A docker image running noVNC
 
-## Base Docker Image
-[Alpine](https://hub.docker.com/_/alpine) (x64)
-[Debian](https://hub.docker.com/_/debian) (x64)
-[Ubuntu](https://hub.docker.com/_/ubuntu) (x64)
+## Supported Images
+All images are built for x64 (linux/amd64) from the official [Alpine](https://hub.docker.com/_/alpine), [Debian](https://hub.docker.com/_/debian) and [Ubuntu](https://hub.docker.com/_/ubuntu) base images.
+
+| Tag | OS (base image) | noVNC | websockify | Distro security support |
+|-----|-----------------|-------|------------|-------------------------|
+| `alpine` | Alpine Linux, latest stable (`alpine:latest`) | 1.6.0 | 0.13.0 | follows Alpine releases |
+| `trixie`, `latest` | Debian 13 (`debian:trixie`) | 1.6.0 | 0.12.0 | until Jun 2030 |
+| `bookworm` | Debian 12 (`debian:bookworm`) | 1.3.0 | 0.10.0 | until Jun 2028 |
+| `bullseye` | Debian 11 (`debian:bullseye`) | 1.0.0 | 0.9.0 | ended Aug 2026 |
+| `resolute` | Ubuntu 26.04 LTS (`ubuntu:resolute`) | 1.6.0 | 0.13.0 | until May 2031 |
+| `noble` | Ubuntu 24.04 LTS (`ubuntu:noble`) | 1.3.0 | 0.10.0 | until May 2029 |
+| `jammy` | Ubuntu 22.04 LTS (`ubuntu:jammy`) | 1.0.0 | 0.10.0 | until Jun 2027 |
+| `focal` | Ubuntu 20.04 LTS (`ubuntu:focal`) | 1.0.0 | 0.9.0 | ended May 2025 |
+
+noVNC and websockify are the versions packaged by each distro. The `alpine` tag follows `alpine:latest` (3.24 as of Nov 2026), so its versions move with new Alpine releases. \
+Support dates are from [endoflife.date](https://endoflife.date): end of LTS for Debian, end of standard support for Ubuntu.
 
 ## Pull the images or Build them locally
 ### Alpine Images
