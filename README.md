@@ -8,7 +8,6 @@ All images are built for x64 (linux/amd64) from the official [Alpine](https://hu
 | `alpine` | Alpine Linux, latest stable (`alpine:latest`) | 1.6.0 | 0.13.0 | follows Alpine releases |
 | `trixie`, `latest` | Debian 13 (`debian:trixie`) | 1.6.0 | 0.12.0 | until Jun 2030 |
 | `bookworm` | Debian 12 (`debian:bookworm`) | 1.3.0 | 0.10.0 | until Jun 2028 |
-| `bullseye` | Debian 11 (`debian:bullseye`) | 1.0.0 | 0.9.0 | ended Aug 2026 |
 | `resolute` | Ubuntu 26.04 LTS (`ubuntu:resolute`) | 1.6.0 | 0.13.0 | until May 2031 |
 | `noble` | Ubuntu 24.04 LTS (`ubuntu:noble`) | 1.3.0 | 0.10.0 | until May 2029 |
 | `jammy` | Ubuntu 22.04 LTS (`ubuntu:jammy`) | 1.0.0 | 0.10.0 | until Jun 2027 |
@@ -16,6 +15,8 @@ All images are built for x64 (linux/amd64) from the official [Alpine](https://hu
 
 noVNC and websockify are the versions packaged by each distro. The `alpine` tag follows `alpine:latest` (3.24 as of Nov 2026), so its versions move with new Alpine releases. \
 Support dates are from [endoflife.date](https://endoflife.date): end of LTS for Debian, end of standard support for Ubuntu.
+
+`bullseye` (Debian 11) is no longer built because its LTS ended in Aug 2026; its Dockerfile now lives in `obsolete/`. The last published `ghcr.io/fullaxx/novnc:bullseye` image stays available but won't receive updates.
 
 ## Pull the images or Build them locally
 ### Alpine Images
@@ -26,7 +27,6 @@ docker pull ghcr.io/fullaxx/novnc:alpine
 ```
 docker pull ghcr.io/fullaxx/novnc:trixie
 docker pull ghcr.io/fullaxx/novnc:bookworm
-docker pull ghcr.io/fullaxx/novnc:bullseye
 ```
 ### Ubuntu Images
 ```
@@ -44,7 +44,6 @@ docker build -f Dockerfile.jammy    -t ghcr.io/fullaxx/novnc:jammy .
 docker build -f Dockerfile.focal    -t ghcr.io/fullaxx/novnc:focal .
 docker build -f Dockerfile.trixie   -t ghcr.io/fullaxx/novnc:trixie .
 docker build -f Dockerfile.bookworm -t ghcr.io/fullaxx/novnc:bookworm .
-docker build -f Dockerfile.bullseye -t ghcr.io/fullaxx/novnc:bullseye .
 ```
 
 ## Run the image (using ubuntu-desktop as working example)

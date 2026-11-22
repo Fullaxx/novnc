@@ -6,7 +6,6 @@ done
 
 docker build -f Dockerfile.alpine -t ghcr.io/fullaxx/novnc:alpine .
 
-docker build -f Dockerfile.bullseye -t ghcr.io/fullaxx/novnc:bullseye .
 docker build -f Dockerfile.bookworm -t ghcr.io/fullaxx/novnc:bookworm .
 docker build -f Dockerfile.trixie   -t ghcr.io/fullaxx/novnc:trixie .
 
