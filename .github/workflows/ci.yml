@@ -63,5 +63,3 @@ jobs:
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tag }}
             ${{ matrix.latest && format('{0}/{1}:latest', env.REGISTRY, env.IMAGE_NAME) || '' }}
-          cache-from: type=gha,scope=${{ matrix.tag }}
-          cache-to: type=gha,mode=max,scope=${{ matrix.tag }}
